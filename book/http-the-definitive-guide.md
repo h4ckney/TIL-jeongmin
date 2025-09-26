@@ -352,7 +352,7 @@
 | **file**        | 로컬 파일 경로. OS 파일 시스템 내 자원에 접근.          | 없음        | `file:///C:/OFFICE/SC/policies/casual-fridays.doc`     |
 | **news**        | 뉴스 그룹 기사에 접근. (Usenet 기반)              | 없음        | `news:comp.infosystems.www.servers.unix`               |
 | **telnet**      | 원격 로그인 세션. 원격 서버에 접속해 터미널 사용. (보안 취약)  | 23        | `telnet://slurp.webhound@joes-hardware.com/`           |
-| **tel**         | 전화 링크 (모바일에서 사용)                       | 핸드폰 내 사용  | `tel:010-1234-5678`                                    |
+| **tel**         | 전화 링크 (모바일에서 사용) -> 책에서는 없었지만 추가     | 핸드폰 내 사용  | `tel:010-1234-5678`                                    |
 
 ---
 
