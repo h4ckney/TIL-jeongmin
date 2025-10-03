@@ -859,7 +859,7 @@ The bandsaw model 2647 is in stock!
 
 ⸻
 
-📖 2025년 10월 2일 — HTTP 헤더 정리 (엔티티 헤더 제외)
+# 📖 2025년 10월 2일 — HTTP 헤더 정리 (엔티티 헤더 제외)
 
 ⸻
 
@@ -991,3 +991,80 @@ The bandsaw model 2647 is in stock!
 | Set-Cookie         | 서버가 클라이언트에 쿠키를 설정               |
 | Set-Cookie2        | 확장 쿠키 (현재는 거의 사용되지 않음)         |
 | WWW-Authenticate   | 서버가 클라이언트에게 요구하는 인증 방식 목록 |
+
+⸻
+
+# 2025년 10월 3일 — HTTP 헤더 정리 (엔티티 헤더 - 3장 완료)
+
+⸻
+
+## 3.5 헤더
+
+- 헤더와 메서드는 클라이언트와 서버가 무엇을 하는지 결정하기 위해 함께 사용된다.
+- 표준 HTTP 헤더와 명세에 정의되지 않은 헤더들이 존재한다.
+- 헤더는 다음 다섯 가지로 분류된다:
+  - 일반 헤더 (General Headers)
+  - 요청 헤더 (Request Headers)
+  - 응답 헤더 (Response Headers)
+  - 엔티티 헤더 (Entity Headers)
+  - 확장 헤더 (Extension Headers)
+
+---
+
+## 엔티티 정보 헤더
+
+| 헤더     | 설명                                                                                       |
+| -------- | ------------------------------------------------------------------------------------------ |
+| Allow    | 해당 엔티티에서 수행할 수 있는 요청 메서드 목록을 나열한다.                                |
+| Location | 엔티티가 실제로 어디에 위치하고 있는지 알려준다. (리소스의 새로운 위치 URI를 알릴 때 사용) |
+
+**핵심 요약**
+
+- Allow → 리소스가 지원하는 HTTP 메서드 명시 (`Allow: GET, POST`)
+- Location → 리소스의 새 위치를 알림 (201 Created, 3xx Redirect 시 사용)
+
+---
+
+## 콘텐츠 헤더 (Content Headers)
+
+| 헤더             | 설명                                                                           |
+| ---------------- | ------------------------------------------------------------------------------ |
+| Content-Base     | 본문에서 사용된 상대 URL을 해석하기 위한 기본 URL                              |
+| Content-Encoding | 본문에 적용된 인코딩 방식 (예: gzip, deflate)                                  |
+| Content-Language | 본문을 이해하는데 가장 적절한 언어                                             |
+| Content-Length   | 본문의 길이(바이트 단위)                                                       |
+| Content-Location | 리소스가 실제로 어디에 위치하는지                                              |
+| Content-MD5      | 본문의 MD5 체크섬 값 (무결성 확인)                                             |
+| Content-Range    | 전체 리소스 중 엔티티가 해당하는 범위를 바이트 단위로 표현 (부분 전송 시 사용) |
+| Content-Type     | 엔티티의 MIME 타입 및 문자 인코딩 (예: `text/html; charset=UTF-8`)             |
+
+**핵심 요약**
+
+- Content-\* 헤더는 **본문 자체의 성격**(길이, 언어, 인코딩, 타입 등)을 설명한다.
+
+---
+
+## 엔티티 캐싱 헤더 (Entity Caching Headers)
+
+| 헤더          | 설명                                                               |
+| ------------- | ------------------------------------------------------------------ |
+| ETag          | 엔티티의 고유 식별 태그 (리소스 버전 관리용)                       |
+| Expires       | 엔티티가 더 이상 유효하지 않아 원본을 다시 받아와야 하는 만료 시각 |
+| Last-Modified | 이 엔티티가 마지막으로 변경된 날짜/시간                            |
+
+**핵심 요약**
+
+- ETag / Last-Modified / Expires → **캐싱·조건부 요청 관리** (리소스 변경 여부 판단)
+
+---
+
+## 참고 자료
+
+- RFC 7230: HTTP/1.1, Part 1: Message Syntax and Routing
+- RFC 7231: HTTP/1.1, Part 2: Semantics and Content
+- RFC 7232: HTTP/1.1, Part 4: Conditional Requests
+- RFC 7233: HTTP/1.1, Part 5: Range Requests
+- RFC 7234: HTTP/1.1, Part 6: Caching
+- RFC 7235: HTTP/1.1, Part 7: Authentication
+
+[W3C HTTP Protocols](https://www.w3.org/Protocols/)
