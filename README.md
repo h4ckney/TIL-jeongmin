@@ -8,6 +8,9 @@
 - `book/`
   - 읽은 기술 서적 정리
   - 예: [HTTP 완벽 가이드](book/http-the-definitive-guide.md)
+- `algorithm/`
+  - 풀은 알고리즘 문제 정리
+  - 예: lv2\_타겟넘버.md
 
 ## Currently Studying
 
