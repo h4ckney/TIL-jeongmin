@@ -10,7 +10,10 @@
   - 예: [HTTP 완벽 가이드](book/http-the-definitive-guide.md)
 - `algorithm/`
   - 풀은 알고리즘 문제 정리
-  - 예: lv2\_타겟넘버.md
+  - 예: [lv2\_타겟넘버.md](algorithm/프로그래머스/lv2_타겟넘버.md)
+- `react/`
+  - 리액트 관련 정리
+  - 예: [React 19.2 업데이트 요약.md](react/React%2019.2%20업데이트%20요약.md)
 
 ## Currently Studying
 
